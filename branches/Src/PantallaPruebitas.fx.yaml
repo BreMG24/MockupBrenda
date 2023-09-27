@@ -1,0 +1,9 @@
+PantallaPruebitas As screen:
+
+    Rectangle2 As rectangle:
+        Height: =690
+        Width: =1285
+        X: =40
+        Y: =40
+        ZIndex: =1
+

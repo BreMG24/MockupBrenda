@@ -1,0 +1,94 @@
+{
+  "ComponentIndexes": {},
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Button1": 5,
+    "Button2": 6,
+    "Host": 3,
+    "PantallaPruebitas": 164,
+    "Rectangle2": 165,
+    "Screen1": 4,
+    "Screen2": 8,
+    "Screen3": 107,
+    "TextInput1": 7
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "09/27/2023 21:34:36",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OrderComponentMetadata": {},
+  "OrderComponentTemplate": {},
+  "OrderDataSource": {
+    "ColumnChartSample": 1,
+    "CustomGallerySample": 0,
+    "DropDownSample": 2
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 0,
+    "rectangle": 2,
+    "text": 1
+  },
+  "OverridablePropertiesEntry": {
+    "App": {},
+    "Button1": {},
+    "Button2": {},
+    "Host": {},
+    "PantallaPruebitas": {},
+    "Rectangle2": {},
+    "Screen1": {},
+    "Screen2": {},
+    "Screen3": {},
+    "TextInput1": {}
+  },
+  "PCFDynamicSchemaForIRRetrievalEntry": {},
+  "PCFTemplateEntry": {},
+  "PublishOrderIndices": {
+    "App": 0,
+    "Button1": 0,
+    "Button2": 2,
+    "Host": 0,
+    "PantallaPruebitas": 0,
+    "Rectangle2": 3,
+    "Screen1": 0,
+    "Screen2": 0,
+    "Screen3": 0,
+    "TextInput1": 1
+  },
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0,
+    "Video-SampleVideo": 1
+  },
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.0440327,
+    "ControlCount": {
+      "barChart": 2,
+      "button": 2,
+      "datepicker": 1,
+      "dropdown": 2,
+      "gallery": 10,
+      "galleryTemplate": 10,
+      "group": 14,
+      "htmlViewer": 2,
+      "icon": 19,
+      "image": 13,
+      "label": 46,
+      "rectangle": 29,
+      "screen": 1,
+      "text": 3,
+      "timer": 1,
+      "videoPlayback": 1
+    },
+    "DeserializationLoadTime": 1.0227685
+  },
+  "WasLocalDatabaseReferencesEmpty": true
+}
