@@ -1,6 +1,6 @@
 PantallaPruebitas As screen:
 
-    Rectangle2 As rectangle:
+    Rectangle12 As rectangle:
         Height: =690
         Width: =1285
         X: =40
