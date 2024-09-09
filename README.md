@@ -1,6 +1,7 @@
 # Laboratorio
 
 1. Pruebas para laboratorio
+2. Prueba de ide
 
 ## Getting started
 
