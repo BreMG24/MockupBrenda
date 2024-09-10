@@ -1,5 +1,8 @@
-# Laboratorio
-## Prueba para merge y commit
+=======
+## Prueba para merge y commit (BM)
+
+Hice un comentario. Atte: AC
+>>>>>>> README.md
 1. Pruebas para laboratorio
 2. Prueba de ide
 
