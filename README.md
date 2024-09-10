@@ -1,6 +1,8 @@
 =======
 ## Prueba para merge y commit (BM)
 
+OTRO COMENTARIO PARA EL ISSUE BM 1:06
+
 Hice un comentario. Atte: AC
 >>>>>>> README.md
 1. Pruebas para laboratorio
