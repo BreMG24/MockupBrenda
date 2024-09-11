@@ -13,8 +13,4 @@ Hice un comentario. Atte: AC
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
 
-**Fin de la documentacion**
-
-Linea brenda 10:59
-
-BM 1:37
+-----> se agrega una linea para el req. 2
