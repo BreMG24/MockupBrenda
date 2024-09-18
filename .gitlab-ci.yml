@@ -2,6 +2,7 @@ stages:
   - build
   - test
   - deploy
+  - post-deploy-test
 
 variables:
   DOTNET_VERSION: "6.0"
@@ -33,8 +34,22 @@ deploy:
   stage: deploy
   script:
     - echo "Deploying to production server..."
-    # Aquí puedes agregar los comandos necesarios para desplegar tu aplicación
-    # Por ejemplo, podrías usar rsync, scp, o cualquier otra herramienta de despliegue
     - rsync -avz bin/ user@production_server:/path/to/deploy/
+  environment:
+    name: production
+    url: http://production_server_url
   only:
     - main
+
+post-deploy-test:
+  stage: post-deploy-test
+  script:
+    - echo "Running post-deployment tests..."
+    # Aquí puedes agregar comandos para ejecutar tus pruebas en producción
+    - curl -f http://production_server_url/health || exit 1
+    - dotnet test --configuration Release --filter "Category=PostDeploy"
+  environment:
+    name: production
+  only:
+    - main
+  when: manual
