@@ -44,7 +44,7 @@ deploy:
     name: production
   only:
     - main
-url: https://github.com/BreMG24/MockupBrenda.git
+#url: https://github.com/BreMG24/MockupBrenda.git
 
 
 post-deploy-test:
