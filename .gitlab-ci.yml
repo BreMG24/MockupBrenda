@@ -38,6 +38,9 @@ deploy:
     - echo "Installing git if not present..."
     - apt-get update -y
     - apt-get install -y git
+    - echo "Configuring git user..."
+    - git config --global user.email "brenda.maganag@gmail.com"
+    - git config --global user.name "Brenda"
     - echo "Deploying to production server..."
     - git clone https://github.com/BreMG24/MockupBrenda.git
     - cd MockupBrenda
@@ -49,6 +52,7 @@ deploy:
     name: production
   only:
     - main
+
 
 #url: https://github.com/BreMG24/MockupBrenda.git
 
