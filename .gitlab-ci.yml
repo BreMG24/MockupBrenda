@@ -35,15 +35,21 @@ test:
 deploy:
   stage: deploy
   script:
-    - echo "Installing rsync if not present..."
+    - echo "Installing git if not present..."
     - apt-get update -y
-    - apt-get install -y rsync
+    - apt-get install -y git
     - echo "Deploying to production server..."
-    - rsync -avz bin/ https://github.com/BreMG24/MockupBrenda.git/
+    - git clone https://github.com/BreMG24/MockupBrenda.git
+    - cd MockupBrenda
+    - cp -r ../bin/* .
+    - git add .
+    - git commit -m "Deploying to production server"
+    - git push origin main
   environment:
     name: production
   only:
     - main
+
 #url: https://github.com/BreMG24/MockupBrenda.git
 
 
