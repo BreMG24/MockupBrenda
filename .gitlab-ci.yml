@@ -39,7 +39,7 @@ deploy:
     - apt-get update -y
     - apt-get install -y rsync
     - echo "Deploying to production server..."
-    - rsync -avz bin/ hhttps://github.com/BreMG24/MockupBrenda.git/
+    - rsync -avz bin/ https://github.com/BreMG24/MockupBrenda.git/
   environment:
     name: production
   only:
