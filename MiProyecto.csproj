@@ -12,3 +12,6 @@
   </ItemGroup>
 
 </Project>
+<PropertyGroup>
+  <StartupObject>SumaNumeros.Program</StartupObject>
+</PropertyGroup>
