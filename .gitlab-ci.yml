@@ -6,6 +6,9 @@ stages:
 
 variables:
   DOTNET_VERSION: "6.0"
+  variables:
+  MY_WORD: "something"
+  S3_BUCKET: "brenda-qa"
 
 before_script:
   - apt-get update -y
