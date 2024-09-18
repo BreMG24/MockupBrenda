@@ -29,7 +29,7 @@ test:
   stage: test
   script:
     - dotnet test --configuration Release
-    
+
 deploy:
   stage: deploy
   script:
@@ -37,12 +37,10 @@ deploy:
     - apt-get update -y
     - apt-get install -y rsync
     - echo "Deploying to production server..."
-    - rsync -avz bin/ user@production_server:/path/to/deploy/
+    - rsync -avz bin/ your_production_user@your.production.server.address:/path/to/deploy/
   environment:
     name: production
-    url: http://production_server_url
-  only:
-    - main
+    url: http://your.production.server.address
 
 post-deploy-test:
   stage: post-deploy-test
