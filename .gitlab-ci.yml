@@ -6,7 +6,6 @@ stages:
 
 variables:
   DOTNET_VERSION: "6.0"
-  variables:
   MY_WORD: "something"
   S3_BUCKET: "brenda-qa"
 
@@ -48,14 +47,15 @@ test:
 #url: http://your.production.server.address
 
 
-deploy_website:
+deploy:
   stage: deploy
   script:
     - echo "Do your deploy here"
     - apt-get update -y
     - apt-get install -y rsync
     - echo "Deploying to production server..."
-    - aws s3 cp ./public/ s3://$S3_BUCKET/ --recursive
+    
+    - aws s3 cp ./public/ arn:aws:s3:::brenda-qa/ --recursive
   environment: production
   
 
