@@ -55,7 +55,7 @@ deploy:
     - apt-get install -y rsync
     - echo "Deploying to production server..."
     
-    - aws s3 cp ./public/ arn:aws:s3:::brenda-qa/ --recursive
+    - aws s3 cp ./public/ s3://brenda-qa/Laboratorio/ --recursive
   environment: production
   
 
