@@ -37,10 +37,21 @@ deploy:
     - apt-get update -y
     - apt-get install -y rsync
     - echo "Deploying to production server..."
-    - rsync -avz bin/ your_production_user@your.production.server.address:/path/to/deploy/
+    - rsync -avz bin/ $PRODUCTION_USER@$PRODUCTION_SERVER:/path/to/deploy/
   environment:
     name: production
+  only:
+    - main
     #url: http://your.production.server.address
+
+
+  #deploy-job:      # This job runs in the deploy stage.
+  #stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  #environment: production
+  #script:
+  #  - echo "Deploying application..."
+  #  - echo "Application successfully deployed."
+
 
 post-deploy-test:
   stage: post-deploy-test
