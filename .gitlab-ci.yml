@@ -29,13 +29,13 @@ test:
   stage: test
   script:
     - dotnet test --configuration Release
-
+    
 deploy:
   stage: deploy
   script:
     - echo "Installing rsync if not present..."
-    - sudo apt-get update -y
-    - sudo apt-get install -y rsync
+    - apt-get update -y
+    - apt-get install -y rsync
     - echo "Deploying to production server..."
     - rsync -avz bin/ user@production_server:/path/to/deploy/
   environment:
