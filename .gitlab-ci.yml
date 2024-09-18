@@ -1,12 +1,12 @@
 stages:
   - build
   - test
+  - deploy
 
 variables:
   DOTNET_VERSION: "6.0"
 
 before_script:
-  
   - apt-get update -y
   - apt-get install -y wget
   - wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -28,3 +28,13 @@ test:
   stage: test
   script:
     - dotnet test --configuration Release
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying to production server..."
+    # Aquí puedes agregar los comandos necesarios para desplegar tu aplicación
+    # Por ejemplo, podrías usar rsync, scp, o cualquier otra herramienta de despliegue
+    - rsync -avz bin/ user@production_server:/path/to/deploy/
+  only:
+    - main
