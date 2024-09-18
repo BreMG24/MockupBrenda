@@ -1,32 +1,28 @@
-
-stages:          # List of stages for jobs, and their order of execution
+stages:
   - build
   - test
-  - deploy
 
-build-job:       # This job runs in the build stage, which runs first.
+variables:
+  DOTNET_VERSION: "6.0"
+
+before_script:
+  - apt-get update -y
+  - apt-get install -y wget
+  - wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+  - dpkg -i packages-microsoft-prod.deb
+  - apt-get update -y
+  - apt-get install -y dotnet-sdk-$DOTNET_VERSION
+
+build:
   stage: build
   script:
-    - echo "Compiling the code..."
-    - echo "Compile complete."
+    - dotnet restore
+    - dotnet build --configuration Release
+  artifacts:
+    paths:
+      - bin/
 
-unit-test-job:   # This job runs in the test stage.
-  stage: test    # It only starts when the job in the build stage completes successfully.
+test:
+  stage: test
   script:
-    - echo "Running unit tests... This will take about 60 seconds."
-    - sleep 60
-    - echo "Code coverage is 90%"
-
-lint-test-job:   # This job also runs in the test stage.
-  stage: test    # It can run at the same time as unit-test-job (in parallel).
-  script:
-    - echo "Linting code... This will take about 10 seconds."
-    - sleep 10
-    - echo "No lint issues found."
-
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production
-  script:
-    - echo "Deploying application..."
-    - echo "Application successfully deployed."
+    - dotnet test --configuration Release
