@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
+    <StartupObject>SumaNumeros.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +13,3 @@
   </ItemGroup>
 
 </Project>
-<PropertyGroup>
-  <StartupObject>SumaNumeros.Program</StartupObject>
-</PropertyGroup>
