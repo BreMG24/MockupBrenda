@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SumaNumeros.Tests
 {
     [TestClass]
-    public class ProgramTests
+    public class ProgramTests2
     {
         [TestMethod]
         public void TestSuma()
