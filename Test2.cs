@@ -10,7 +10,7 @@ namespace SumaNumeros.Tests
         {
             int numero1 = -2;
             int numero2 = 3;
-            int resultadoEsperado = 5;
+            int resultadoEsperado = 1;
 
             int resultado = numero1 + numero2;
 
