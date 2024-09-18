@@ -40,7 +40,7 @@ deploy:
     - rsync -avz bin/ your_production_user@your.production.server.address:/path/to/deploy/
   environment:
     name: production
-    url: http://your.production.server.address
+    #url: http://your.production.server.address
 
 post-deploy-test:
   stage: post-deploy-test
