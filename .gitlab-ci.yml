@@ -32,32 +32,20 @@ test:
   script:
     - dotnet test --configuration Release
 
-#deploy:
-#  stage: deploy
-#  script:
-#    - echo "Installing rsync if not present..."
-#    - apt-get update -y
-#    - apt-get install -y rsync
-#    - echo "Deploying to production server..."
-#    - rsync -avz bin/ http://brenda-qa.s3-website-us-east-1.amazonaws.com:/path/to/deploy/
-#  environment:
-#    name: production
-#  only:
-#    - main
-#url: http://your.production.server.address
-
-
 deploy:
   stage: deploy
   script:
-    - echo "Do your deploy here"
+    - echo "Installing rsync if not present..."
     - apt-get update -y
     - apt-get install -y rsync
     - echo "Deploying to production server..."
-    
-    - aws s3 cp ./public/ s3://brenda-qa/Laboratorio/ --recursive
-  environment: production
-  
+    - rsync -avz bin/ hhttps://github.com/BreMG24/MockupBrenda.git/
+  environment:
+    name: production
+  only:
+    - main
+url: https://github.com/BreMG24/MockupBrenda.git
+
 
 post-deploy-test:
   stage: post-deploy-test
