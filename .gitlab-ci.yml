@@ -39,8 +39,8 @@ deploy:
     - apt-get update -y
     - apt-get install -y git
     - echo "Configuring git user..."
-    - git config --global user.email "brenda.maganag@gmail.com"
-    - git config --global user.name "Brenda"
+    - git config --global user.email "brenda.magana@armur.femsa.com"
+    - git config --global user.name "BreMG24"
     - echo "Deploying to production server..."
     - git clone https://github.com/BreMG24/MockupBrenda.git
     - cd MockupBrenda
