@@ -53,6 +53,10 @@ deploy:
   only:
     - master
 
+
+#url: https://github.com/BreMG24/MockupBrenda.git
+
+
 post-deploy-test:
   stage: post-deploy-test
   script:
