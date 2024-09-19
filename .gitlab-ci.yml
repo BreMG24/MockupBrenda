@@ -47,7 +47,8 @@ deploy:
     - cp -r ../bin/* .
     - git add .
     - git commit -m "Deploying to production server"
-    - git push origin main
+    #- git push origin main
+    - git push origin master
   environment:
     name: production
   only:
