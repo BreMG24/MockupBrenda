@@ -51,7 +51,7 @@ deploy:
   environment:
     name: production
   only:
-    - master
+    - main
 
 post-deploy-test:
   stage: post-deploy-test
