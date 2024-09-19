@@ -47,11 +47,15 @@ deploy:
     - cp -r ../bin/* .
     - git add .
     - git commit -m "Deploying to production server"
-    - git push origin master
+    - git push origin main
   environment:
     name: production
   only:
     - main
+
+
+#url: https://github.com/BreMG24/MockupBrenda.git
+
 
 post-deploy-test:
   stage: post-deploy-test
@@ -64,4 +68,4 @@ post-deploy-test:
     name: production
   only:
     - master
-  #when: manual
+  when: manual
