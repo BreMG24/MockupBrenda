@@ -68,4 +68,4 @@ post-deploy-test:
     name: production
   only:
     - master
-  when: manual
+  #when: manual
