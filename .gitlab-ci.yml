@@ -67,5 +67,5 @@ post-deploy-test:
   environment:
     name: production
   only:
-    - master
+    - main
   #when: manual
