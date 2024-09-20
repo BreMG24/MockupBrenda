@@ -43,7 +43,7 @@ deploy:
     - git config --global user.name "BreMG24"
     - echo "Deploying to production server..."
      - git clone https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
-    - cd MockupBrenda
+    - cd branches
     - cp -r ../bin/* .
     - git add .
     - git commit -m "Deploying to production server"
