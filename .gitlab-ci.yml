@@ -42,7 +42,7 @@ deploy:
     - git config --global user.email "brenda.magana@armur.femsa.com"
     - git config --global user.name "BreMG24"
     - echo "Deploying to production server..."
-    - git clone https://github.com/BreMG24/MockupBrenda.git
+     - git clone https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
     - cd MockupBrenda
     - cp -r ../bin/* .
     - git add .
