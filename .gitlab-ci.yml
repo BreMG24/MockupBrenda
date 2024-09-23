@@ -43,13 +43,7 @@ deploy:
     - git config --global user.name "BreMG24"
     - echo "Deploying to production server..."
      - git clone https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
-    if [ -d "MockupBrenda" ]; then 
-      cd MockupBrenda
-    else 
-      mkdir MockupBrenda
-      cd MockupBrenda
-    fi
-
+    - if [ -d "MockupBrenda" ]; then cd MockupBrenda; else echo "Directory MockupBrenda does not exist"; exit 1; fi
     #- cd branches
     - cp -r ../bin/* .
     - git add .
