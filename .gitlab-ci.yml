@@ -49,6 +49,12 @@ deploy:
     - git add .
     - git commit -m "Deploying to production server"
     #- git push origin main
+    
+    -git branch
+    -git checkout -b main
+    -git remote -v
+    
+
     - git push origin main
   environment:
     name: production
