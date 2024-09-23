@@ -33,7 +33,7 @@ test:
     - dotnet test --configuration Release
 deploy:
   stage: deploy
-   script:
+  script:
     - echo "Installing git if not present..."
     - apt-get update -y
     - apt-get install -y git
