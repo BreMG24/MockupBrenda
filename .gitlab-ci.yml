@@ -31,7 +31,6 @@ test:
   stage: test
   script:
     - dotnet test --configuration Release
-
 deploy:
   stage: deploy
   script:
@@ -42,18 +41,17 @@ deploy:
     - git config --global user.email "brenda.magana@armur.femsa.com"
     - git config --global user.name "BreMG24"
     - echo "Deploying to production server..."
-     - git clone https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
+    - git clone https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
     #- if [ -d "MockupBrenda" ]; then cd MockupBrenda; else pwd; exit 1; fi
     #- cd branches
     #- cp -r ../bin/* .
-        -git branch
-    -git checkout -b main
-    -git remote -v
-    
+    - git branch
+    - git checkout -b main
+    - git remote -v
     - git add .
     - git commit -m "Deploying to production server"
     #- git push origin main
-    
+
 
     
 
