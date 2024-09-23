@@ -48,6 +48,8 @@ deploy:
     - git branch
     - git checkout -b main
     - git remote -v
+    - git remote set-url origin https://oauth2:${GITHUB_TOKEN}@github.com/proyecto-externos/proyecto-externo-1/laboratorio.git
+
     - git add .
     - git commit -m "Deploying to production server"
     #- git push origin main
