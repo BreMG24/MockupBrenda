@@ -1,0 +1,3 @@
+[submodule "MockupBrenda"]
+  path = MockupBrenda
+  url = https://github.com/BreMG24/MockupBrenda.git
