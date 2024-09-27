@@ -48,6 +48,8 @@ deploy:
     - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
     - echo "Pushing to GitHub..."
     - git push github main
+
+    
     
 
     - git push origin main
