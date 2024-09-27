@@ -31,6 +31,7 @@ test:
   stage: test
   script:
     - dotnet test --configuration Release
+
 deploy:
   stage: deploy
   script:
@@ -40,18 +41,13 @@ deploy:
     - echo "Configuring git user..."
     - git config --global user.email "brenda.magana@armur.femsa.com"
     - git config --global user.name "BreMG24"
-    - echo "Deploying to production server..."
-    - git clone https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
-    - cd MockupBrenda
-    - git submodule init
-    - git submodule update
-    - cd ..
-    - git branch
-    - git checkout -b main
-    - git remote -v
-    - git add .
-    - git commit -m "Deploying to production server"
-    #- git push origin main
+    - echo "Cloning from GitLab..."
+    - git clone https://oauth2:${GITLAB_TOKEN}@gitlab.com/laboratorio.git
+    - cd laboratorio
+    - echo "Adding GitHub remote..."
+    - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
+    - echo "Pushing to GitHub..."
+    - git push github main
     
 
     - git push origin main
