@@ -50,9 +50,14 @@ deploy:
     - cd laboratorio
     - echo "Adding GitHub remote..."
     - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
+    
+     - echo "Pulling latest changes from GitHub..."
+    - git pull github main --rebase
+
     - echo "Pushing to GitHub..."
     - git push github main
 
+    - echo "Pushing to GitLab..."
     - git push origin main
   environment:
     name: production
