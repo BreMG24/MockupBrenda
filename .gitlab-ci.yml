@@ -61,7 +61,7 @@ deploy:
     - echo "Pushing to GitHub..."
     - git push github main
 
-    - echo "Pushing to GitLab..."
+    - echo "Pushing to GitLab...*****"
     - git push origin main
   environment:
     name: production
