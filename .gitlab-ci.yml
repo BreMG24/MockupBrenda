@@ -43,6 +43,10 @@ deploy:
     - git config --global user.name "BreMG24"
     - echo "Cloning from GitLab..."
 
+    - echo "GITLAB_TOKEN: ${GITLAB_TOKEN}"
+    - echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
+
+
     - export GITLAB_TOKEN=glpat-S1bBRKQgV3m2rzGCfiAJ
     
     #- git clone "https://oauth2:${GITLAB_TOKEN}@gitlab.com/Proyecto%20Externos/Proyecto%20Externo%201/laboratorio.git"
@@ -50,7 +54,7 @@ deploy:
     - cd laboratorio
     - echo "Adding GitHub remote..."
     - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
-    
+
      - echo "Pulling latest changes from GitHub..."
     - git pull github main --rebase
 
