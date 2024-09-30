@@ -39,7 +39,7 @@ deploy:
     - apt-get update -y
     - apt-get install -y git
     - echo "Configuring git user..."
-    - git config --global user.email "142343029+BreMG24@users.noreply.github.com"
+    - git config --global user.email "brenda.magana@outlook.com"
     - git config --global user.name "BreMG24"
     - echo "Cloning from GitLab..."
 
