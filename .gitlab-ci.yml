@@ -50,8 +50,6 @@ deploy:
     - git push github main
 
 
-    
-
     - git push origin main
   environment:
     name: production
