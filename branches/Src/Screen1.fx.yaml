@@ -1,0 +1,23 @@
+Screen1 As screen:
+
+    Button1 As button:
+        Text: ="Prueba importar"
+        X: =394
+        Y: =104
+        ZIndex: =1
+
+    Button2 As button:
+        Height: =80
+        OnSelect: |-
+            =Launch("https://apps.powerapps.com/play/e/2dba5e68-6167-e137-9779-66ef12a81c09/a/56c9124c-8a94-4f8b-be86-d248e1ad894e?tenantId=cd5a7a30-5f9a-410b-a037-86e1e17a4330&hint=64017863-99cc-4b04-a411-718048d5bb3f&sourcetime=1695840318658")
+        Text: ="Botón"
+        X: =973
+        Y: =315
+        ZIndex: =2
+
+    TextInput1 As text:
+        Default: ="Entrada de texto"
+        X: =1017
+        Y: =201
+        ZIndex: =3
+
