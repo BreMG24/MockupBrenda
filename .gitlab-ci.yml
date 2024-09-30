@@ -42,6 +42,8 @@ deploy:
     - git config --global user.email "brenda.magana@armur.femsa.com"
     - git config --global user.name "BreMG24"
     - echo "Cloning from GitLab..."
+
+    - export GITLAB_TOKEN=glpat-S1bBRKQgV3m2rzGCfiAJ
     - git clone "https://oauth2:${GITLAB_TOKEN}@gitlab.com/Proyecto%20Externos/Proyecto%20Externo%201/laboratorio.git"
     - cd laboratorio
     - echo "Adding GitHub remote..."
