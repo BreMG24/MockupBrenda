@@ -42,7 +42,7 @@ deploy:
     - git config --global user.email "brenda.magana@armur.femsa.com"
     - git config --global user.name "BreMG24"
     - echo "Cloning from GitLab..."
-    - git clone "https://oauth2:${GITLAB_TOKEN}@gitlab.com/Proyecto Externos/Proyecto Externo 1/laboratorio.git"
+    - git clone git clone "https://oauth2:${GITLAB_TOKEN}@gitlab.com/Proyecto%20Externos/Proyecto%20Externo%201/laboratorio.git"
     - cd laboratorio
     - echo "Adding GitHub remote..."
     - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/BreMG24/MockupBrenda.git
